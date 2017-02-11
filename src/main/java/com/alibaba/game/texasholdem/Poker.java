@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Class {@code Poker} 一副扑克牌.
+ */
 public class Poker {
 
     private List<Card> cards;
