@@ -4,17 +4,17 @@ import com.alibaba.game.texasholdem.*;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-public class StraightFlushRankingImplTest extends TestCase {
+public class StraightRankingImplTest extends TestCase {
 
 
     @Test
-    public void testIsStraightFlushRanking() {
+    public void testIsStraightRanking() {
 
-        Card card13 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_KING);
+        Card card13 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_KING);
         Card card12 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_QUEUE);
-        Card card11 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_JACK);
+        Card card11 = new Card(CardSuitEnum.CLUBS, CardRankEnum.CARD_JACK);
         Card card10 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_TEN);
-        Card card9 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_NINE);
+        Card card9 = new Card(CardSuitEnum.DIAMONDS, CardRankEnum.CARD_NINE);
 
         Card otherSuitCard = new Card(CardSuitEnum.DIAMONDS, CardRankEnum.CARD_TEN);
 
@@ -25,12 +25,12 @@ public class StraightFlushRankingImplTest extends TestCase {
         p.addCard(card12);
         p.addCard(card13);
 
-        IRanking ranking = new StraightFlushRankingImpl();
+        IRanking ranking = new StraightRankingImpl();
 
         RankingResult result = ranking.resolve(p);
         assertTrue(result != null);
 
-        assertEquals(result.getRankingEnum(), RuleRankingEnum.STRAIGHT_FLUSH);
+        assertEquals(result.getRankingEnum(), RuleRankingEnum.STRAIGHT);
 
         Player p2 = new Player();
         p2.addCard(card9);
@@ -39,7 +39,7 @@ public class StraightFlushRankingImplTest extends TestCase {
         p2.addCard(card12);
         p2.addCard(otherSuitCard);
 
-        IRanking ranking2 = new StraightFlushRankingImpl();
+        IRanking ranking2 = new StraightRankingImpl();
 
         RankingResult result2 = ranking2.resolve(p2);
         assertTrue(result2 == null);
