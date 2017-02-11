@@ -30,7 +30,7 @@ public class StraightFlushRankingImplTest extends TestCase {
         RankingResult result = ranking.resolve(p);
         assertTrue(result != null);
 
-        assertEquals(result.getRankingEnum(), RuleRankingEnum.STRAIGHT_FLUSH);
+        assertEquals(result.getRankingEnum(), RankingEnum.STRAIGHT_FLUSH);
 
         Player p2 = new Player();
         p2.addCard(card9);

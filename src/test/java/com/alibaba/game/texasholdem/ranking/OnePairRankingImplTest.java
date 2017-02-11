@@ -30,7 +30,7 @@ public class OnePairRankingImplTest extends TestCase {
         RankingResult result = ranking.resolve(p);
         assertTrue(result != null);
 
-        assertEquals(result.getRankingEnum(), RuleRankingEnum.ONE_PAIR);
+        assertEquals(result.getRankingEnum(), RankingEnum.ONE_PAIR);
 
         Player p2 = new Player();
         p2.addCard(card13);

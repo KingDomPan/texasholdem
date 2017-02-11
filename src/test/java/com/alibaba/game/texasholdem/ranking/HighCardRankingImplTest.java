@@ -17,8 +17,6 @@ public class HighCardRankingImplTest extends TestCase {
         Card card9 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_NINE);
         Card card8 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_EIGHT);
 
-        Card otherSuitCard = new Card(CardSuitEnum.DIAMONDS, CardRankEnum.CARD_THREE);
-
         Player p = new Player();
         p.addCard(card13);
         p.addCard(card12);
@@ -31,7 +29,7 @@ public class HighCardRankingImplTest extends TestCase {
         RankingResult result = ranking.resolve(p);
         assertTrue(result != null);
 
-        assertEquals(result.getRankingEnum(), RuleRankingEnum.HIGH_CARD);
+        assertEquals(result.getRankingEnum(), RankingEnum.HIGH_CARD);
 
         Player p2 = new Player();
         p2.addCard(card13);

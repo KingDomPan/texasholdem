@@ -1,7 +1,7 @@
 package com.alibaba.game.texasholdem.ranking;
 
 import com.alibaba.game.texasholdem.Player;
-import com.alibaba.game.texasholdem.RuleRankingEnum;
+import com.alibaba.game.texasholdem.RankingEnum;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -32,7 +32,7 @@ public class OnePairRankingImpl extends AbstractRanking {
 
         if (hasOne) {
             result = new RankingResult();
-            result.setRankingEnum(RuleRankingEnum.ONE_PAIR);
+            result.setRankingEnum(RankingEnum.ONE_PAIR);
         }
 
         return result;

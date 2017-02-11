@@ -1,11 +1,9 @@
 package com.alibaba.game.texasholdem.ranking;
 
 import com.alibaba.game.texasholdem.Card;
-import com.alibaba.game.texasholdem.CardRankEnum;
 import com.alibaba.game.texasholdem.Player;
-import com.alibaba.game.texasholdem.RuleRankingEnum;
+import com.alibaba.game.texasholdem.RankingEnum;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,7 +19,7 @@ public class FlushRankingImpl extends AbstractRanking {
         List<Card> cards = player.getCards();
         if (this.isSameSuit(cards)) { // 如果是同色
             result = new RankingResult();
-            result.setRankingEnum(RuleRankingEnum.FLUSH);
+            result.setRankingEnum(RankingEnum.FLUSH);
         }
 
         return result;

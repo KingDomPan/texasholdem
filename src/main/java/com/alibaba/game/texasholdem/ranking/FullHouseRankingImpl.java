@@ -1,13 +1,9 @@
 package com.alibaba.game.texasholdem.ranking;
 
-import com.alibaba.game.texasholdem.Card;
-import com.alibaba.game.texasholdem.Constants;
 import com.alibaba.game.texasholdem.Player;
-import com.alibaba.game.texasholdem.RuleRankingEnum;
+import com.alibaba.game.texasholdem.RankingEnum;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -36,7 +32,7 @@ public class FullHouseRankingImpl extends AbstractRanking {
 
         if (isFullHouse) {
             result = new RankingResult();
-            result.setRankingEnum(RuleRankingEnum.FULL_HOUSE);
+            result.setRankingEnum(RankingEnum.FULL_HOUSE);
         }
 
         return result;

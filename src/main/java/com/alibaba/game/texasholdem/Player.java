@@ -39,7 +39,7 @@ public class Player {
 
     public RankingResult getRankingResult() {
         if (rankingResult == null) {
-            rankingResult.setRankingEnum(RuleRankingEnum.HIGH_CARD);
+            rankingResult.setRankingEnum(RankingEnum.HIGH_CARD);
             rankingResult.setHighCard(this.cards.get(0));
         }
         return rankingResult;

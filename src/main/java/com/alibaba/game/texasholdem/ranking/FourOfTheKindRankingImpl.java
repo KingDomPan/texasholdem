@@ -1,12 +1,10 @@
 package com.alibaba.game.texasholdem.ranking;
 
-import com.alibaba.game.texasholdem.Card;
+import com.alibaba.game.texasholdem.Constants;
 import com.alibaba.game.texasholdem.Player;
-import com.alibaba.game.texasholdem.RuleRankingEnum;
+import com.alibaba.game.texasholdem.RankingEnum;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -24,7 +22,7 @@ public class FourOfTheKindRankingImpl extends AbstractRanking {
 
         Iterator<Map.Entry<Integer, Integer>> it = rankCount.entrySet().iterator();
         while(it.hasNext()) {
-            if (it.next().getValue() == 4) {
+            if (it.next().getValue() == Constants.HAND_CARD_NUMERS - 1) {
                 hasFour = true;
                 break;
             }
@@ -32,7 +30,7 @@ public class FourOfTheKindRankingImpl extends AbstractRanking {
 
         if (hasFour) {
             result = new RankingResult();
-            result.setRankingEnum(RuleRankingEnum.FOUR_OF_A_KIND);
+            result.setRankingEnum(RankingEnum.FOUR_OF_THE_KIND);
         }
 
         return result;

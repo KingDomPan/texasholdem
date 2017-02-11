@@ -30,7 +30,7 @@ public class FullHouseRankingImplTest extends TestCase {
         RankingResult result = ranking.resolve(p);
         assertTrue(result != null);
 
-        assertEquals(result.getRankingEnum(), RuleRankingEnum.FULL_HOUSE);
+        assertEquals(result.getRankingEnum(), RankingEnum.FULL_HOUSE);
 
         Player p2 = new Player();
         p2.addCard(card13);

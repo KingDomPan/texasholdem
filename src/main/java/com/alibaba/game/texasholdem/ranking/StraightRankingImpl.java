@@ -2,7 +2,7 @@ package com.alibaba.game.texasholdem.ranking;
 
 import com.alibaba.game.texasholdem.Card;
 import com.alibaba.game.texasholdem.Player;
-import com.alibaba.game.texasholdem.RuleRankingEnum;
+import com.alibaba.game.texasholdem.RankingEnum;
 
 import java.util.List;
 
@@ -31,7 +31,7 @@ public class StraightRankingImpl extends AbstractRanking {
             }
             if (isStraight == true) {
                 result = new RankingResult();
-                result.setRankingEnum(RuleRankingEnum.STRAIGHT);
+                result.setRankingEnum(RankingEnum.STRAIGHT);
             }
 
         }

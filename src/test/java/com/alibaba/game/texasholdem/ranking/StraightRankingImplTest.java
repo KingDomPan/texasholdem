@@ -30,7 +30,7 @@ public class StraightRankingImplTest extends TestCase {
         RankingResult result = ranking.resolve(p);
         assertTrue(result != null);
 
-        assertEquals(result.getRankingEnum(), RuleRankingEnum.STRAIGHT);
+        assertEquals(result.getRankingEnum(), RankingEnum.STRAIGHT);
 
         Player p2 = new Player();
         p2.addCard(card9);

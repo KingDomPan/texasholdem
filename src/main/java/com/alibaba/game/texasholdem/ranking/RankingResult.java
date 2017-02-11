@@ -1,7 +1,7 @@
 package com.alibaba.game.texasholdem.ranking;
 
 import com.alibaba.game.texasholdem.Card;
-import com.alibaba.game.texasholdem.RuleRankingEnum;
+import com.alibaba.game.texasholdem.RankingEnum;
 
 /**
  * Class {@code RankingResult} 牌型解析接口的返回值
@@ -9,7 +9,7 @@ import com.alibaba.game.texasholdem.RuleRankingEnum;
 public class RankingResult {
 
     private Card highCard; // 5张牌中最大的值
-    private RuleRankingEnum rankingEnum; // 牌型
+    private RankingEnum rankingEnum; // 牌型
 
     public Card getHighCard() {
         return highCard;
@@ -19,11 +19,11 @@ public class RankingResult {
         this.highCard = highCard;
     }
 
-    public RuleRankingEnum getRankingEnum() {
+    public RankingEnum getRankingEnum() {
         return rankingEnum;
     }
 
-    public void setRankingEnum(RuleRankingEnum rankingEnum) {
+    public void setRankingEnum(RankingEnum rankingEnum) {
         this.rankingEnum = rankingEnum;
     }
 }

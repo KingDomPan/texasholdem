@@ -3,10 +3,8 @@ package com.alibaba.game.texasholdem.ranking;
 import com.alibaba.game.texasholdem.Card;
 import com.alibaba.game.texasholdem.Constants;
 import com.alibaba.game.texasholdem.Player;
-import com.alibaba.game.texasholdem.RuleRankingEnum;
-import org.w3c.dom.ls.LSInput;
+import com.alibaba.game.texasholdem.RankingEnum;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -36,7 +34,7 @@ public class HighCardRankingImpl extends AbstractRanking {
 
         if (allOne) {
             result = new RankingResult();
-            result.setRankingEnum(RuleRankingEnum.HIGH_CARD);
+            result.setRankingEnum(RankingEnum.HIGH_CARD);
         }
 
         return result;

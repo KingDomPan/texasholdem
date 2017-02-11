@@ -8,7 +8,7 @@ public class RuleRankingEnumTest extends TestCase {
     @Test
     public void testGetNumber() {
 
-        RuleRankingEnum ruleRanking1 = RuleRankingEnum.FLUSH;
+        RankingEnum ruleRanking1 = RankingEnum.FLUSH;
 
         assertEquals(ruleRanking1.getType(), "同花");
         assertEquals(ruleRanking1.getPriority(), 600);

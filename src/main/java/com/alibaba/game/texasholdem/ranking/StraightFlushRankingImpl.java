@@ -1,11 +1,9 @@
 package com.alibaba.game.texasholdem.ranking;
 
 import com.alibaba.game.texasholdem.Card;
-import com.alibaba.game.texasholdem.CardRankEnum;
 import com.alibaba.game.texasholdem.Player;
-import com.alibaba.game.texasholdem.RuleRankingEnum;
+import com.alibaba.game.texasholdem.RankingEnum;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -33,7 +31,7 @@ public class StraightFlushRankingImpl extends AbstractRanking {
             }
             if (isStraight == true) {
                 result = new RankingResult();
-                result.setRankingEnum(RuleRankingEnum.STRAIGHT_FLUSH);
+                result.setRankingEnum(RankingEnum.STRAIGHT_FLUSH);
             }
 
         }

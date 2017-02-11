@@ -30,7 +30,7 @@ public class ThreeOfTheKindRankingImplTest extends TestCase {
         RankingResult result = ranking.resolve(p);
         assertTrue(result != null);
 
-        assertEquals(result.getRankingEnum(), RuleRankingEnum.THREE_OF_A_KIND);
+        assertEquals(result.getRankingEnum(), RankingEnum.THREE_OF_THE_KIND);
 
         Player p2 = new Player();
         p2.addCard(card13);

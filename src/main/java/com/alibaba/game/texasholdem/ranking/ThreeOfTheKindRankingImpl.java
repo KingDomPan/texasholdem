@@ -1,7 +1,7 @@
 package com.alibaba.game.texasholdem.ranking;
 
 import com.alibaba.game.texasholdem.Player;
-import com.alibaba.game.texasholdem.RuleRankingEnum;
+import com.alibaba.game.texasholdem.RankingEnum;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -29,7 +29,7 @@ public class ThreeOfTheKindRankingImpl extends AbstractRanking {
 
         if (hasThree) {
             result = new RankingResult();
-            result.setRankingEnum(RuleRankingEnum.THREE_OF_A_KIND);
+            result.setRankingEnum(RankingEnum.THREE_OF_THE_KIND);
         }
 
         return result;
