@@ -17,7 +17,7 @@ public abstract class AbstractComparing implements IComparing {
         Iterator<Map.Entry<Integer, Integer>> it = map1.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<Integer, Integer> next = it.next();
-            if (next.getValue() == 4) {
+            if (next.getValue() == pair) {
                 p1Number = next.getKey();
             }
         }
@@ -25,7 +25,7 @@ public abstract class AbstractComparing implements IComparing {
         Iterator<Map.Entry<Integer, Integer>> it2 = map2.entrySet().iterator();
         while (it2.hasNext()) {
             Map.Entry<Integer, Integer> next = it2.next();
-            if (next.getValue() == 4) {
+            if (next.getValue() == pair) {
                 p2Number = next.getKey();
             }
         }
