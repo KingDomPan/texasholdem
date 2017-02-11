@@ -11,7 +11,6 @@ public enum CardSuitEnum {
 
     private String name;
     private int priority;
-    private Object q;
 
     CardSuitEnum(String name, int priority) {
         this.name = name;

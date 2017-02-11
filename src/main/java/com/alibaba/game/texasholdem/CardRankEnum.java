@@ -4,19 +4,19 @@ package com.alibaba.game.texasholdem;
  * Enum {@code CardRankEnum} 扑克牌的数字.
  */
 public enum CardRankEnum {
-    CardTwo(2),
-    CardThree(3),
-    CardFour(4),
-    CardFive(5),
-    CardSix(6),
-    CardSeven(7),
-    CardEight(8),
-    CardNight(9),
-    CardTen(10),
-    CardJACK(11),
-    CardQueue(12),
-    CardKing(13),
-    CardAce(14);
+    CARD_TWO(2),
+    CARD_THREE(3),
+    CARD_FOUR(4),
+    CARD_FIVE(5),
+    CARD_SIX(6),
+    CARD_SEVEN(7),
+    CARD_EIGHT(8),
+    CARD_NINE(9),
+    CARD_TEN(10),
+    CARD_JACK(11),
+    CARD_QUEUE(12),
+    CARD_KING(13),
+    CARD_ACE(14);
 
     private int number;
 
