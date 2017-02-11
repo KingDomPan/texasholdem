@@ -1,21 +1,22 @@
 package com.alibaba.game.texasholdem.comparing;
 
 import com.alibaba.game.texasholdem.*;
+import com.alibaba.game.texasholdem.ranking.FlushRankingImpl;
 import com.alibaba.game.texasholdem.ranking.IRanking;
 import com.alibaba.game.texasholdem.ranking.RankingResult;
 import com.alibaba.game.texasholdem.ranking.StraightFlushRankingImpl;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-public class StraightFlushComparingImplTest extends TestCase {
+public class FlushComparingImplTest extends TestCase {
 
     @Test
     public void testComparing() {
-        Card card1 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_FOUR);
+        Card card1 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_THREE);
         Card card2 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_FIVE);
-        Card card3 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_SIX);
+        Card card3 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_TWO);
         Card card4 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_SEVEN);
-        Card card5 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_EIGHT);
+        Card card5 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_JACK);
 
         Player p = new Player();
         p.addCard(card1);
@@ -24,18 +25,18 @@ public class StraightFlushComparingImplTest extends TestCase {
         p.addCard(card4);
         p.addCard(card5);
 
-        IRanking ranking = new StraightFlushRankingImpl();
+        IRanking ranking = new FlushRankingImpl();
         RankingResult result = ranking.resolve(p);
 
         assertTrue(result != null);
-        assertEquals(result.getRankingEnum(), RankingEnum.STRAIGHT_FLUSH);
+        assertEquals(result.getRankingEnum(), RankingEnum.FLUSH);
 
 
-        Card card21 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_FOUR);
-        Card card22 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_FIVE);
-        Card card23 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_SIX);
+        Card card21 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_TWO);
+        Card card22 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_THREE);
+        Card card23 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_FIVE);
         Card card24 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_SEVEN);
-        Card card25 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_EIGHT);
+        Card card25 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_QUEUE);
 
         Player p2 = new Player();
         p2.addCard(card21);
@@ -44,12 +45,12 @@ public class StraightFlushComparingImplTest extends TestCase {
         p2.addCard(card24);
         p2.addCard(card25);
 
-        IRanking ranking2 = new StraightFlushRankingImpl();
+        IRanking ranking2 = new FlushRankingImpl();
         RankingResult result2 = ranking2.resolve(p2);
 
         assertTrue(result2 != null);
-        assertEquals(result2.getRankingEnum(), RankingEnum.STRAIGHT_FLUSH);
+        assertEquals(result2.getRankingEnum(), RankingEnum.FLUSH);
 
-        assertEquals(0, p.compareTo(p2));
+        assertEquals(1, p.compareTo(p2));
     }
 }

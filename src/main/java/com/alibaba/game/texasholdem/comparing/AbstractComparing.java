@@ -1,6 +1,10 @@
 package com.alibaba.game.texasholdem.comparing;
 
+import com.alibaba.game.texasholdem.Card;
+import com.alibaba.game.texasholdem.Player;
+
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 public abstract class AbstractComparing implements IComparing {
@@ -33,6 +37,26 @@ public abstract class AbstractComparing implements IComparing {
             return 1;
         }
 
+        return 0;
+    }
+
+    protected int seqComparing(Player p1, Player p2) {
+        List<Card> p1Cards = p1.getCards();
+        List<Card> p2Cards = p2.getCards();
+
+        int size = p1.getCardSize();
+
+        for (int i = 0; i < size; i++) {
+            if (p1Cards.get(i).getRank().getNumber() < p2Cards.get(i).getRank().getNumber()) {
+                return 1;
+            }
+            if (p1Cards.get(i).getRank().getNumber() > p2Cards.get(i).getRank().getNumber()) {
+                return -1;
+            }
+            if (p1Cards.get(i).getRank().getNumber() == p2Cards.get(i).getRank().getNumber()) {
+                continue;
+            }
+        }
         return 0;
     }
 

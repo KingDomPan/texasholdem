@@ -14,6 +14,7 @@ public class ComparingFacade {
         maps.put(RankingEnum.STRAIGHT_FLUSH, new StraightFlushComparingImpl());
         maps.put(RankingEnum.FOUR_OF_THE_KIND, new FourOfTheKindComparingImpl());
         maps.put(RankingEnum.FULL_HOUSE, new FullHouseComparingImpl());
+        maps.put(RankingEnum.FLUSH, new FlushComparingImpl());
     }
 
     public static IComparing getComparing(RankingEnum rankingEnum) {
