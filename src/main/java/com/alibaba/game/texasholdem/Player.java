@@ -1,6 +1,9 @@
 package com.alibaba.game.texasholdem;
 
+import com.alibaba.game.texasholdem.ranking.RankingResult;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -9,6 +12,7 @@ import java.util.List;
 public class Player {
 
     private List<Card> cards; // 玩家手上的五张牌
+    private RankingResult rankingResult; // 牌型校验结果
 
     public Player() {
         this.cards = new ArrayList<Card>();
@@ -28,5 +32,22 @@ public class Player {
      */
     public void addCard(Card card) {
         this.cards.add(card);
+        Collections.sort(this.cards);
+    }
+
+    public List<Card> getCards() {
+        return cards;
+    }
+
+    public RankingResult getRankingResult() {
+        if (rankingResult == null) {
+            rankingResult.setRankingEnum(RuleRankingEnum.HIGH_CARD);
+            rankingResult.setHighCard(this.cards.get(0));
+        }
+        return rankingResult;
+    }
+
+    public void setRankingResult(RankingResult rankingResult) {
+        this.rankingResult = rankingResult;
     }
 }
