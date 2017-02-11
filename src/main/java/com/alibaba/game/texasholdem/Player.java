@@ -18,6 +18,7 @@ public class Player {
 
     /**
      * 获得手上的牌的张数
+     *
      * @return
      */
     public int getCardSize() {
@@ -26,6 +27,7 @@ public class Player {
 
     /**
      * 增加手牌
+     *
      * @param card
      */
     public void addCard(Card card) {

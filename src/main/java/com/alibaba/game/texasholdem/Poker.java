@@ -20,10 +20,10 @@ public class Poker {
 
     private void init() {
         this.cards = new ArrayList<Card>();
-        for (CardSuitEnum suitEnum: CardSuitEnum.values()) {
-           for (CardRankEnum rankEnum: CardRankEnum.values()) {
-               cards.add(new Card(suitEnum, rankEnum));
-           }
+        for (CardSuitEnum suitEnum : CardSuitEnum.values()) {
+            for (CardRankEnum rankEnum : CardRankEnum.values()) {
+                cards.add(new Card(suitEnum, rankEnum));
+            }
         }
         Collections.shuffle(this.cards);
     }

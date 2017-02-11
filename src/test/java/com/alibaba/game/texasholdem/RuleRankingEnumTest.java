@@ -13,5 +13,5 @@ public class RuleRankingEnumTest extends TestCase {
         assertEquals(ruleRanking1.getType(), "同花");
         assertEquals(ruleRanking1.getPriority(), 600);
     }
-    
+
 }

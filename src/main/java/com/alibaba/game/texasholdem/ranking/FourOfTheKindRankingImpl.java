@@ -21,7 +21,7 @@ public class FourOfTheKindRankingImpl extends AbstractRanking {
         boolean hasFour = false;
 
         Iterator<Map.Entry<Integer, Integer>> it = rankCount.entrySet().iterator();
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             if (it.next().getValue() == Constants.HAND_CARD_NUMERS - 1) {
                 hasFour = true;
                 break;

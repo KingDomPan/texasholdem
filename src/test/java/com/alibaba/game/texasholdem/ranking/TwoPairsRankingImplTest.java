@@ -12,7 +12,7 @@ public class TwoPairsRankingImplTest extends TestCase {
 
         Card card13 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_KING);
         Card card1313 = new Card(CardSuitEnum.DIAMONDS, CardRankEnum.CARD_KING);
-        Card card12= new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_QUEUE);
+        Card card12 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_QUEUE);
         Card card1212 = new Card(CardSuitEnum.CLUBS, CardRankEnum.CARD_QUEUE);
         Card card9 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_NINE);
 

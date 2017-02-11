@@ -21,7 +21,7 @@ public class RoyalFlushRankingImpl extends AbstractRanking {
         List<Card> cards = player.getCards();
         if (this.isSameSuit(cards)) { // 如果是同色
             List<CardRankEnum> ranks = new ArrayList<CardRankEnum>();
-            for (Card card: cards) {
+            for (Card card : cards) {
                 ranks.add(card.getRank());
             }
             if (ranks.contains(CardRankEnum.CARD_TEN) // 且是10 J Q K A

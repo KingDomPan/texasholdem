@@ -20,7 +20,7 @@ public class StraightRankingImpl extends AbstractRanking {
         if (!this.isSameSuit(cards)) { // 如果是同色
             boolean isStraight = true;
             Card previousCard = null;
-            for (Card card: cards) {
+            for (Card card : cards) {
                 if (previousCard != null) {
                     if (card.getRank().getNumber() - previousCard.getRank().getNumber() != -1) {
                         isStraight = false;

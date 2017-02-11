@@ -25,6 +25,7 @@ public class Dealer {
 
     /**
      * 新增玩家
+     *
      * @param player
      */
     public void join(Player player) {
@@ -33,6 +34,7 @@ public class Dealer {
 
     /**
      * 获得玩家数量
+     *
      * @return
      */
     public int getPlayerSize() {
@@ -43,8 +45,8 @@ public class Dealer {
      * 开始游戏, 负责被每个玩家发牌
      */
     public void start() {
-        for (int i = 0; i < this.playerList.size(); i ++) {
-            for (int j = 0; j < Constants.HAND_CARD_NUMERS; j ++) {
+        for (int i = 0; i < this.playerList.size(); i++) {
+            for (int j = 0; j < Constants.HAND_CARD_NUMERS; j++) {
                 this.playerList.get(i).addCard(this.poker.dispatch());
             }
         }

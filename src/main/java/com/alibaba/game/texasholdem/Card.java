@@ -17,7 +17,7 @@ public class Card implements Comparable<Card> {
         return suit;
     }
 
-    public int getRankNumber () {
+    public int getRankNumber() {
         return this.rank.getNumber();
     }
 
@@ -58,6 +58,7 @@ public class Card implements Comparable<Card> {
     /**
      * 实现Comparable接口, 获取最大的单牌, 直接使用牌的数字大小比较即可
      * 使用降序排序, 因为第一个Card极为单牌最大值
+     *
      * @param o
      * @return
      */

@@ -11,7 +11,7 @@ public class HighCardRankingImplTest extends TestCase {
     public void testIsOnePairRanking() {
 
         Card card13 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_KING);
-        Card card12= new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_QUEUE);
+        Card card12 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_QUEUE);
         Card card11 = new Card(CardSuitEnum.CLUBS, CardRankEnum.CARD_JACK);
         Card card10 = new Card(CardSuitEnum.CLUBS, CardRankEnum.CARD_TEN);
         Card card9 = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_NINE);

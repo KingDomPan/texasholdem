@@ -21,7 +21,7 @@ public class FullHouseRankingImpl extends AbstractRanking {
 
         if (rankCount.size() == 2) {
             Iterator<Map.Entry<Integer, Integer>> it = rankCount.entrySet().iterator();
-            while(it.hasNext()) {
+            while (it.hasNext()) {
                 Map.Entry<Integer, Integer> next = it.next();
                 if (next.getValue() == 2 || next.getValue() == 3) {
                     isFullHouse = true;

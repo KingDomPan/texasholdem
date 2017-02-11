@@ -4,7 +4,6 @@ import com.alibaba.game.texasholdem.Card;
 import com.alibaba.game.texasholdem.CardSuitEnum;
 import com.alibaba.game.texasholdem.Player;
 
-import java.util.Collections;
 import java.util.List;
 
 /**

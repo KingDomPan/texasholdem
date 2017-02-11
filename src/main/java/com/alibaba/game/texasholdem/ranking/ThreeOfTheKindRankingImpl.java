@@ -20,7 +20,7 @@ public class ThreeOfTheKindRankingImpl extends AbstractRanking {
         boolean hasThree = false;
 
         Iterator<Map.Entry<Integer, Integer>> it = rankCount.entrySet().iterator();
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             if (it.next().getValue() == 3) {
                 hasThree = true;
                 break;

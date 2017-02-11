@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 import org.junit.Test;
 
 public class CardSuitEnumTest extends TestCase {
-    
+
     @Test
     public void testGetName() {
 
@@ -18,5 +18,5 @@ public class CardSuitEnumTest extends TestCase {
         assertEquals(cardSuit3.getName(), "C");
         assertEquals(cardSuit4.getName(), "D");
     }
-    
+
 }

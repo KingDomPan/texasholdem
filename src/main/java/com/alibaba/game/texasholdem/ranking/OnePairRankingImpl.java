@@ -21,7 +21,7 @@ public class OnePairRankingImpl extends AbstractRanking {
 
         if (rankCount.size() == 4) {
             Iterator<Map.Entry<Integer, Integer>> it = rankCount.entrySet().iterator();
-            while(it.hasNext()) {
+            while (it.hasNext()) {
                 Map.Entry<Integer, Integer> next = it.next();
                 if (next.getValue() == 2 || next.getValue() == 1) {
                     hasOne = true;
