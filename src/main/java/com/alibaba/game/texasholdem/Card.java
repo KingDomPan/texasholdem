@@ -17,6 +17,10 @@ public class Card {
         return suit;
     }
 
+    public int getRankNumber () {
+        return this.rank.getNumber();
+    }
+
     public void setSuit(CardSuitEnum suit) {
         this.suit = suit;
     }
@@ -43,7 +47,7 @@ public class Card {
 
     @Override
     public int hashCode() {
-        return this.suit.getPriority() + this.rank.getNumber();
+        return this.suit.ordinal() + this.rank.getNumber();
     }
 
     @Override

@@ -4,17 +4,15 @@ package com.alibaba.game.texasholdem;
  * Enum {@code CardSuitEnum} 扑克牌的花色.
  */
 public enum CardSuitEnum {
-    A("红桃", 1000),
-    B("方块", 1),
-    C("黑桃", 10000),
-    D("梅花", 100);
+    HEARTS("A"),
+    DIAMONDS("B"),
+    SPADES("C"),
+    CLUBS("D");
 
     private String name;
-    private int priority;
 
-    CardSuitEnum(String name, int priority) {
+    CardSuitEnum(String name) {
         this.name = name;
-        this.priority = priority;
     }
 
     public String getName() {
@@ -25,11 +23,4 @@ public enum CardSuitEnum {
         this.name = name;
     }
 
-    public int getPriority() {
-        return priority;
-    }
-
-    public void setPriority(int priority) {
-        this.priority = priority;
-    }
 }
