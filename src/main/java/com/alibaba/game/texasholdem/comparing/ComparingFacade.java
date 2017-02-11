@@ -8,6 +8,7 @@ import java.util.Map;
 public class ComparingFacade {
 
     private final static Map<RankingEnum, IComparing> maps = new HashMap<RankingEnum, IComparing>();
+    private final static IComparing defaultComparing = new DefaultComparingImpl();
 
     static {
         maps.put(RankingEnum.ROYAL_FLUSH, new RoyalFlushComparingImpl());
@@ -19,10 +20,16 @@ public class ComparingFacade {
         maps.put(RankingEnum.THREE_OF_THE_KIND, new ThreeOfTheKindComparingImpl());
         maps.put(RankingEnum.TWO_PAIR, new TwoPairsComparingImpl());
         maps.put(RankingEnum.ONE_PAIR, new OnePairComparingImpl());
+        maps.put(RankingEnum.HIGH_CARD, new HighCardComparingImpl());
     }
 
     public static IComparing getComparing(RankingEnum rankingEnum) {
-        return maps.get(rankingEnum);
+        IComparing cmp = maps.get(rankingEnum);
+        if (cmp == null) {
+            return defaultComparing;
+        } else {
+            return cmp;
+        }
     }
 
 }
