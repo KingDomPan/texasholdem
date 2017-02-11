@@ -1,5 +1,7 @@
 package com.alibaba.game.texasholdem;
 
+import com.alibaba.game.texasholdem.comparing.ComparingFacade;
+import com.alibaba.game.texasholdem.comparing.IComparing;
 import com.alibaba.game.texasholdem.ranking.RankingResult;
 
 import java.util.*;
@@ -7,7 +9,7 @@ import java.util.*;
 /**
  * Class {@code Player} 一个玩家, 持有5张牌, 并伴随牌型的属性.
  */
-public class Player {
+public class Player implements Comparable<Player> {
 
     private List<Card> cards; // 玩家手上的五张牌
     private RankingResult rankingResult; // 牌型校验结果
@@ -63,5 +65,23 @@ public class Player {
 
     public void setRankingResult(RankingResult rankingResult) {
         this.rankingResult = rankingResult;
+    }
+
+    public int compareTo(Player o) {
+        int selfPriority = this.getRankingResult().getRankingEnum().getPriority();
+        int otherPriority = o.getRankingResult().getRankingEnum().getPriority();
+
+        if (selfPriority < otherPriority) {
+            return 1;
+        }
+        if (selfPriority > otherPriority) {
+            return -1;
+        }
+
+        if (selfPriority == otherPriority) {
+            IComparing cmp = ComparingFacade.getComparing(this.getRankingResult().getRankingEnum());
+            return cmp.compare(this, o);
+        }
+        return 0;
     }
 }

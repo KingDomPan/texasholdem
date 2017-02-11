@@ -17,7 +17,7 @@ public class RankingFacade implements IRanking {
 
     static {
         rankings.add(new RoyalFlushRankingImpl());
-        rankings.add(new StraightRankingImpl());
+        rankings.add(new StraightFlushRankingImpl());
         rankings.add(new FourOfTheKindRankingImpl());
         rankings.add(new FullHouseRankingImpl());
         rankings.add(new FlushRankingImpl());
