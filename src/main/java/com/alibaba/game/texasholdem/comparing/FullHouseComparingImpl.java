@@ -14,7 +14,7 @@ public class FullHouseComparingImpl extends AbstractComparing {
         Map<Integer, Integer> p1CardMap = o1.getCardsRankCountMap();
         Map<Integer, Integer> p2CardMap = o2.getCardsRankCountMap();
 
-        return this.pairComparing(p1CardMap, p2CardMap, 3);
+        return this.multiComparing(p1CardMap, p2CardMap, 3);
     }
 
 }
