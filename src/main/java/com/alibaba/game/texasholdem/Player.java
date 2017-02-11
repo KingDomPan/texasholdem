@@ -84,4 +84,12 @@ public class Player implements Comparable<Player> {
         }
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "cards=" + cards +
+                ", rankingResult=" + rankingResult +
+                '}';
+    }
 }

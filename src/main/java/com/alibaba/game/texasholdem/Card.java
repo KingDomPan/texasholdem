@@ -52,7 +52,7 @@ public class Card implements Comparable<Card> {
 
     @Override
     public String toString() {
-        return "Card: Suit is " + this.suit.getName() + ", Rank is " + this.rank.getNumber();
+        return this.suit.getName() + this.rank.getNumber();
     }
 
     /**

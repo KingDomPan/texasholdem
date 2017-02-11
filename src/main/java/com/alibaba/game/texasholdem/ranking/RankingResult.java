@@ -26,4 +26,11 @@ public class RankingResult {
     public void setRankingEnum(RankingEnum rankingEnum) {
         this.rankingEnum = rankingEnum;
     }
+
+    @Override
+    public String toString() {
+        return "RankingResult{" +
+                "rankingEnum=" + rankingEnum.getType() +
+                '}';
+    }
 }

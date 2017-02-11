@@ -1,7 +1,10 @@
 package com.alibaba.game.texasholdem;
 
+import com.alibaba.game.texasholdem.ranking.RankingFacade;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -49,7 +52,12 @@ public class Dealer {
             for (int j = 0; j < Constants.HAND_CARD_NUMERS; j++) {
                 this.playerList.get(i).addCard(this.poker.dispatch());
             }
+            RankingFacade.getInstance().resolve(this.playerList.get(i));
         }
     }
 
+    public List<Player> getRankingPlayers() {
+        Collections.sort(this.playerList);
+        return this.playerList;
+    }
 }
