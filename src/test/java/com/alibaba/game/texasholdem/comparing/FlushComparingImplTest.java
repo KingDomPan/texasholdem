@@ -4,7 +4,6 @@ import com.alibaba.game.texasholdem.*;
 import com.alibaba.game.texasholdem.ranking.FlushRankingImpl;
 import com.alibaba.game.texasholdem.ranking.IRanking;
 import com.alibaba.game.texasholdem.ranking.RankingResult;
-import com.alibaba.game.texasholdem.ranking.StraightFlushRankingImpl;
 import junit.framework.TestCase;
 import org.junit.Test;
 

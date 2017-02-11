@@ -1,7 +1,6 @@
 package com.alibaba.game.texasholdem.comparing;
 
 import com.alibaba.game.texasholdem.*;
-import com.alibaba.game.texasholdem.ranking.FourOfTheKindRankingImpl;
 import com.alibaba.game.texasholdem.ranking.IRanking;
 import com.alibaba.game.texasholdem.ranking.RankingResult;
 import com.alibaba.game.texasholdem.ranking.ThreeOfTheKindRankingImpl;

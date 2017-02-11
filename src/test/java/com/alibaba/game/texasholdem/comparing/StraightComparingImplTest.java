@@ -3,7 +3,6 @@ package com.alibaba.game.texasholdem.comparing;
 import com.alibaba.game.texasholdem.*;
 import com.alibaba.game.texasholdem.ranking.IRanking;
 import com.alibaba.game.texasholdem.ranking.RankingResult;
-import com.alibaba.game.texasholdem.ranking.StraightFlushRankingImpl;
 import com.alibaba.game.texasholdem.ranking.StraightRankingImpl;
 import junit.framework.TestCase;
 import org.junit.Test;
