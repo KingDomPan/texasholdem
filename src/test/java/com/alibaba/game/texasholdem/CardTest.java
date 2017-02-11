@@ -3,6 +3,10 @@ package com.alibaba.game.texasholdem;
 import junit.framework.TestCase;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class CardTest extends TestCase {
 
     @Test
@@ -41,6 +45,24 @@ public class CardTest extends TestCase {
         assertEquals(card2.toString(), "Card: Suit is C, Rank is 11");
         assertEquals(card3.toString(), "Card: Suit is B, Rank is 12");
         assertEquals(card4.toString(), "Card: Suit is D, Rank is 13");
+    }
+
+    @Test
+    public void testCompareTo() {
+        List<Card> cards = new ArrayList<Card>();
+        Card card = new Card(CardSuitEnum.HEARTS, CardRankEnum.CARD_ACE);
+        Card card2 = new Card(CardSuitEnum.SPADES, CardRankEnum.CARD_KING);
+        Card card3 = new Card(CardSuitEnum.DIAMONDS, CardRankEnum.CARD_QUEUE);
+
+        cards.add(card);
+        cards.add(card2);
+        cards.add(card3);
+
+        Collections.sort(cards);
+
+        assertEquals(card, cards.get(0));
+        assertEquals(card2, cards.get(1));
+        assertEquals(card3, cards.get(2));
     }
 
 }
