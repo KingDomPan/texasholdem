@@ -11,6 +11,7 @@ public abstract class AbstractComparing implements IComparing {
 
     /**
      * 按照三条或者或者四条的比较
+     *
      * @param map1
      * @param map2
      * @param pair
@@ -49,6 +50,7 @@ public abstract class AbstractComparing implements IComparing {
 
     /**
      * 按照顺序的比较
+     *
      * @param p1
      * @param p2
      * @return
@@ -74,10 +76,9 @@ public abstract class AbstractComparing implements IComparing {
     }
 
     /**
-     *
      * @param map1
      * @param map2
-     * @param pair 对子的数量
+     * @param pair              对子的数量
      * @param maxPairLoopAddOne 对子最大的循环数量+1
      * @return
      */
