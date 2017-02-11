@@ -18,17 +18,7 @@ public class FourOfTheKindRankingImpl extends AbstractRanking {
     protected RankingResult doResolve(Player player) {
 
         RankingResult result = null;
-
-        List<Card> cards = player.getCards();
-        Map<Integer, Integer> rankCount = new HashMap<Integer, Integer>();
-        for (Card card : cards) {
-            Integer number = new Integer(card.getRank().getNumber());
-            if (!rankCount.containsKey(number)) {
-                rankCount.put(number, 1);
-            } else {
-                rankCount.put(number, rankCount.get(number) + 1);
-            }
-        }
+        Map<Integer, Integer> rankCount = player.getCardsRankCountMap();
 
         boolean hasFour = false;
 

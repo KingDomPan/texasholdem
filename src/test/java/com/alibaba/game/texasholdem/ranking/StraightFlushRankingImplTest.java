@@ -33,11 +33,11 @@ public class StraightFlushRankingImplTest extends TestCase {
         assertEquals(result.getRankingEnum(), RuleRankingEnum.STRAIGHT_FLUSH);
 
         Player p2 = new Player();
-        p.addCard(card9);
-        p.addCard(card10);
-        p.addCard(card11);
-        p.addCard(card12);
-        p.addCard(otherSuitCard);
+        p2.addCard(card9);
+        p2.addCard(card10);
+        p2.addCard(card11);
+        p2.addCard(card12);
+        p2.addCard(otherSuitCard);
 
         IRanking ranking2 = new RoyalFlushRankingImpl();
 

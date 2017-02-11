@@ -2,9 +2,7 @@ package com.alibaba.game.texasholdem;
 
 import com.alibaba.game.texasholdem.ranking.RankingResult;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Class {@code Player} 一个玩家, 持有5张牌, 并伴随牌型的属性.
@@ -45,6 +43,20 @@ public class Player {
             rankingResult.setHighCard(this.cards.get(0));
         }
         return rankingResult;
+    }
+
+    public Map<Integer, Integer> getCardsRankCountMap() {
+        List<Card> cards = this.getCards();
+        Map<Integer, Integer> rankCount = new HashMap<Integer, Integer>();
+        for (Card card : cards) {
+            Integer number = new Integer(card.getRank().getNumber());
+            if (!rankCount.containsKey(number)) {
+                rankCount.put(number, 1);
+            } else {
+                rankCount.put(number, rankCount.get(number) + 1);
+            }
+        }
+        return rankCount;
     }
 
     public void setRankingResult(RankingResult rankingResult) {

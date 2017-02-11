@@ -33,11 +33,11 @@ public class RoyalFlushRankingImplTest extends TestCase {
         assertEquals(result.getRankingEnum(), RuleRankingEnum.ROYAL_FLUSH);
 
         Player p2 = new Player();
-        p.addCard(card1);
-        p.addCard(card2);
-        p.addCard(card3);
-        p.addCard(card4);
-        p.addCard(otherSuitCard);
+        p2.addCard(card1);
+        p2.addCard(card2);
+        p2.addCard(card3);
+        p2.addCard(card4);
+        p2.addCard(otherSuitCard);
 
         IRanking ranking2 = new RoyalFlushRankingImpl();
 
