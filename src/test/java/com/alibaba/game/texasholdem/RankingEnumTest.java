@@ -3,7 +3,7 @@ package com.alibaba.game.texasholdem;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-public class RuleRankingEnumTest extends TestCase {
+public class RankingEnumTest extends TestCase {
 
     @Test
     public void testGetNumber() {
