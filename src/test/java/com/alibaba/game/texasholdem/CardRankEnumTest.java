@@ -12,9 +12,9 @@ public class CardRankEnumTest extends TestCase {
         CardRankEnum cardRank2 = CardRankEnum.CARD_TWO;
         CardRankEnum cardRank3 = CardRankEnum.CARD_TEN;
 
-        assertEquals(cardRank1.getNumber(), 14);
-        assertEquals(cardRank2.getNumber(), 2);
-        assertEquals(cardRank3.getNumber(), 10);
+        assertEquals(14, cardRank1.getNumber().intValue());
+        assertEquals(2, cardRank2.getNumber().intValue());
+        assertEquals(10, cardRank3.getNumber().intValue());
     }
 
 }

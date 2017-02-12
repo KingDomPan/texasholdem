@@ -35,10 +35,10 @@ public class PlayerTest extends TestCase {
 
         Map<Integer, Integer> rankCount = player.getCardsRankCountMap();
 
-        assertEquals(new Integer(2), rankCount.get(new Integer(CardRankEnum.CARD_KING.getNumber())));
-        assertEquals(new Integer(1), rankCount.get(new Integer(CardRankEnum.CARD_ACE.getNumber())));
-        assertEquals(new Integer(1), rankCount.get(new Integer(CardRankEnum.CARD_QUEUE.getNumber())));
-        assertEquals(new Integer(1), rankCount.get(new Integer(CardRankEnum.CARD_JACK.getNumber())));
+        assertEquals(2, rankCount.get(CardRankEnum.CARD_KING.getNumber()).intValue());
+        assertEquals(1, rankCount.get(CardRankEnum.CARD_ACE.getNumber()).intValue());
+        assertEquals(1, rankCount.get(CardRankEnum.CARD_QUEUE.getNumber()).intValue());
+        assertEquals(1, rankCount.get(CardRankEnum.CARD_JACK.getNumber()).intValue());
     }
 
 }
