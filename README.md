@@ -54,8 +54,8 @@
 #### 代码结构
 - com.alibaba.game.*: 主函数入口
 - com.alibaba.game.texasholdem.*: 基本对象
-- com.alibaba.game.texasholdem.ranking.*: **ranking**的逻辑, 每个实现类具有可插拔的性质, 如要扩展**牌型规则**, 在这里实现具体的**解析类**即可
-- com.alibaba.game.texasholdem.comparing.*: **comparing**的逻辑, 每个实现类具有可插拔的性质, 如要扩展**牌型比较规则**, 在这里实现具体的**比较类**即可
+- com.alibaba.game.texasholdem.ranking.*: `ranking`的逻辑, 每个实现类具有可插拔的性质, 如要扩展`牌型规则`, 在这里实现具体的`解析类`即可
+- com.alibaba.game.texasholdem.comparing.*: `comparing`的逻辑, 每个实现类具有可插拔的性质, 如要扩展`牌型比较规则`, 在这里实现具体的`比较类`即可
 - TEST: 包含对应类的**单元测试**
 
 #### 其他
