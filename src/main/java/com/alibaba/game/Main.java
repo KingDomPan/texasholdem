@@ -1,8 +1,11 @@
-package com.alibaba.game.texasholdem;
+package com.alibaba.game;
+
+import com.alibaba.game.texasholdem.Dealer;
+import com.alibaba.game.texasholdem.Player;
 
 import java.util.List;
 
-public class GameStartor {
+public class Main {
 
     public static void main(String[] args) {
         Dealer d = new Dealer();
@@ -14,6 +17,7 @@ public class GameStartor {
         d.join(you);
 
         d.start();
+        d.showHand();
 
         List<Player> players = d.getRankingPlayers();
 
