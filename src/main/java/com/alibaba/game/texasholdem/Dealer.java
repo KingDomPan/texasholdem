@@ -52,6 +52,14 @@ public class Dealer {
             for (int j = 0; j < Constants.HAND_CARD_NUMERS; j++) {
                 this.playerList.get(i).addCard(this.poker.dispatch());
             }
+        }
+    }
+
+    /**
+     * 计算每个玩家的牌型
+     */
+    public void showHand() {
+        for (int i = 0; i < this.playerList.size(); i++) {
             RankingFacade.getInstance().resolve(this.playerList.get(i));
         }
     }

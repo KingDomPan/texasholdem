@@ -18,17 +18,17 @@ public enum CardRankEnum {
     CARD_KING(13),
     CARD_ACE(14);
 
-    private int number;
+    private Integer number;
 
-    CardRankEnum(int number) {
+    CardRankEnum(Integer number) {
         this.number = number;
     }
 
-    public int getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 }
