@@ -43,6 +43,7 @@ public class Player implements Comparable<Player> {
 
     public RankingResult getRankingResult() {
         if (rankingResult == null) {
+            rankingResult =  new RankingResult();
             rankingResult.setRankingEnum(RankingEnum.HIGH_CARD);
             rankingResult.setHighCard(this.cards.get(0));
         }
